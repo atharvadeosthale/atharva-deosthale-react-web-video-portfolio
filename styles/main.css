@@ -1,0 +1,67 @@
+/*
+  Global styles for Atharva Deosthale portfolio
+  Keep Tailwind directives out of this file per instructions.
+*/
+
+:root {
+  color-scheme: dark;
+}
+
+html, body { height: 100%; }
+
+/* Subtle dotted grid reminiscent of Linear's aesthetic */
+.pattern-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: -1px -1px;
+}
+
+/* Smooth focus states for accessibility */
+:focus-visible {
+  outline: 2px solid rgba(62, 167, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(62,167,255,0.35);
+}
+
+/* Hide scrollbars for chip rails and queues while keeping scrollability */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Transitions, reduced motion */
+* { transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, transform 200ms ease; }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* Video thumbnails */
+.video-thumb {
+  position: relative;
+}
+.video-thumb .play-pill {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #e8eef6;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* Queue list items */
+#queueList li { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 8px 4px; }
+#queueList li button { font-size: 12px; }
+
+/* Responsive helpers to prevent text wrapping on buttons */
+button, .btn-primary, .btn-ghost { white-space: nowrap; }
+
+/* Prevent overlapping content on tiny screens */
+@media (max-width: 360px) {
+  header .h-16 { padding-left: 8px; padding-right: 8px; }
+}

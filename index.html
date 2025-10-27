@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atharva Deosthale — React & Web Video Creator</title>
+  <meta name="description" content="Portfolio of Atharva Deosthale, a content creator making videos about React and the modern web.">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            base: {
+              900: '#0b0f14',
+              800: '#0f141a',
+              700: '#141a22',
+              600: '#1a212b'
+            },
+            ink: '#e8eef6',
+            subtle: '#a6b0bf',
+            brand: '#3ea7ff',
+            brandSoft: '#13324a',
+            accent: '#f59e0b'
+          },
+          boxShadow: {
+            glass: '0 10px 30px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.02)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji']
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss" data-teda="tailwind-apply">
+    @layer components {
+      .btn-primary { @apply whitespace-nowrap inline-flex items-center justify-center min-w-[9rem] rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-black shadow hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand/40 transition; }
+      .btn-ghost { @apply whitespace-nowrap inline-flex items-center justify-center min-w-[9rem] rounded-lg border border-white/10 bg-white/0 px-5 py-3 text-sm font-semibold text-ink/80 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white/10 transition; }
+      .chip { @apply whitespace-nowrap inline-flex items-center rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-ink/80 hover:bg-white/5 cursor-pointer transition; }
+      .chip-active { @apply bg-brandSoft/60 text-ink border-brand/40; }
+      .pill { @apply inline-flex items-center rounded-full bg-brandSoft/40 px-3 py-1 text-xs text-ink/80; }
+      .nav-link { @apply text-ink/70 hover:text-ink transition; }
+      .card { @apply rounded-xl border border-white/5 bg-white/0 backdrop-blur-sm shadow-glass; }
+      .section { @apply relative mx-auto max-w-6xl px-6; }
+      .headline { @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink; }
+      .subhead { @apply text-base sm:text-lg text-ink/70; }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="bg-base-900 text-ink antialiased min-h-full">
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-base-900/70 bg-base-900/90 border-b border-white/5">
+    <div class="section flex items-center justify-between h-16">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="h-8 w-8 rounded-md bg-brand/90 grid place-items-center text-black font-extrabold">A</div>
+        <span class="text-sm font-semibold text-ink group-hover:text-white transition">Atharva Deosthale</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6">
+        <a href="#features" class="nav-link">Why watch</a>
+        <a href="#highlights" class="nav-link">Highlights</a>
+        <a href="#subscribe" class="nav-link">Subscribe</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="app.html" class="btn-primary">Enter Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.035] pointer-events-none pattern-grid"></div>
+      <div class="section flex flex-col items-center text-center py-24 sm:py-28 lg:py-36">
+        <div class="mb-6"><span class="pill">React and the modern web</span></div>
+        <h1 class="headline max-w-3xl">I make crisp, developer-first videos that help you ship better React apps.</h1>
+        <p class="subhead mt-5 max-w-2xl">No fluff. Just practical patterns, performance insights, and production-grade techniques.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center gap-3">
+          <a href="app.html" class="btn-primary">Browse videos</a>
+          <a href="app.html?v=react-server-components" class="btn-ghost">Watch latest</a>
+        </div>
+        <div class="mt-16 w-full">
+          <div class="mx-auto max-w-4xl card p-4 sm:p-6">
+            <div class="aspect-video w-full rounded-lg overflow-hidden border border-white/10 bg-base-800">
+              <img src="https://i.ytimg.com/vi_webp/8KB3DHI-QbM/maxresdefault.webp" alt="Video preview" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+            </div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-4">
+              <div>
+                <h3 class="text-ink font-semibold">Hooks beyond basics: mastering effects</h3>
+                <p class="text-ink/60 text-sm">A hands-on walkthrough for taming useEffect, concurrency and data fetching.</p>
+              </div>
+              <a href="app.html?v=react-effects-mastery" class="btn-ghost">Play now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section py-20">
+      <div class="flex flex-col gap-10">
+        <div class="max-w-xl">
+          <h2 class="text-2xl sm:text-3xl font-bold text-ink">Built for busy engineers</h2>
+          <p class="text-ink/70 mt-2">Episodes are short, dense and practical so you can apply them immediately at work.</p>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <div class="h-10 w-10 rounded-lg bg-brand/20 text-brand grid place-items-center">⚡</div>
+              <div>
+                <h3 class="text-ink font-semibold">Actionable patterns</h3>
+                <p class="text-ink/60 text-sm">Explore real-world React patterns with clean examples, not toy apps.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <div class="h-10 w-10 rounded-lg bg-brand/20 text-brand grid place-items-center">🎯</div>
+              <div>
+                <h3 class="text-ink font-semibold">Clear, focused episodes</h3>
+                <p class="text-ink/60 text-sm">Every video has a single goal. You leave with one concept deeply understood.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <div class="h-10 w-10 rounded-lg bg-brand/20 text-brand grid place-items-center">🧭</div>
+              <div>
+                <h3 class="text-ink font-semibold">Up-to-date</h3>
+                <p class="text-ink/60 text-sm">Covers modern tooling, server components, streaming, caching and more.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6">
+          <a href="app.html" class="btn-primary">See the library</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights" class="section py-20">
+      <div class="grid grid-cols-1 gap-6">
+        <article class="card p-6">
+          <div class="flex items-center justify-between gap-4 flex-wrap">
+            <div class="flex items-center gap-3">
+              <div class="h-9 w-9 rounded-md bg-brand/90 text-black grid place-items-center font-bold">AD</div>
+              <div>
+                <h3 class="text-ink font-semibold">Brand partnerships</h3>
+                <p class="text-ink/60 text-sm">Open to sponsoring episodes that solve developer pain.</p>
+              </div>
+            </div>
+            <a href="app.html#contact" class="btn-ghost">Start a conversation</a>
+          </div>
+        </article>
+        <article class="card p-6">
+          <div class="flex items-center justify-between gap-4 flex-wrap">
+            <div class="flex items-center gap-3">
+              <div class="h-9 w-9 rounded-md bg-brand/90 text-black grid place-items-center font-bold">★</div>
+              <div>
+                <h3 class="text-ink font-semibold">Community first</h3>
+                <p class="text-ink/60 text-sm">Viewers vote on topics. Favorites and queues sync locally on your device.</p>
+              </div>
+            </div>
+            <a href="app.html" class="btn-ghost">Pick topics</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="subscribe" class="section py-20">
+      <div class="card p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="max-w-xl">
+            <h3 class="text-ink font-semibold text-xl">Never miss an episode</h3>
+            <p class="text-ink/60 text-sm mt-1">Get one email when a new video drops. No spam.
+            </p>
+          </div>
+          <form id="lp-subscribe" class="w-full sm:w-auto flex flex-col sm:flex-row gap-3" aria-label="Subscribe to newsletter">
+            <label class="sr-only" for="lp-email">Email</label>
+            <input id="lp-email" name="email" type="email" required placeholder="you@company.com" class="w-full sm:w-72 rounded-lg bg-base-800 border border-white/10 px-4 py-3 text-sm placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-brand/40" />
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </form>
+        </div>
+        <p id="lp-subscribe-msg" class="text-xs text-ink/60 mt-3" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5">
+    <div class="section flex flex-col sm:flex-row items-center justify-between gap-4 py-8 text-ink/60 text-sm">
+      <p>© <span id="year"></span> Atharva Deosthale. Crafted for developers.</p>
+      <div class="flex items-center gap-4">
+        <a class="nav-link" href="app.html#contact">Contact</a>
+        <a class="nav-link" href="app.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    $(function(){
+      $('#year').text(new Date().getFullYear());
+      $('#lp-subscribe').on('submit', function(e){
+        e.preventDefault();
+        const email = $('#lp-email').val().trim();
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        const el = $('#lp-subscribe-msg');
+        if(!valid){
+          el.text('Please enter a valid email.').removeClass('text-green-400').addClass('text-red-400');
+          return;
+        }
+        try {
+          const key = 'atharva:subscribers';
+          const list = JSON.parse(localStorage.getItem(key) || '[]');
+          if(!list.includes(email)) list.push(email);
+          localStorage.setItem(key, JSON.stringify(list));
+          el.text('Thanks! You are on the list.').removeClass('text-red-400').addClass('text-green-400');
+          $('#lp-email').val('');
+        } catch(err){
+          el.text('Unable to save right now. Please try again.').removeClass('text-green-400').addClass('text-red-400');
+        }
+      });
+    });
+  </script>
+  <script src="scripts/helpers.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
